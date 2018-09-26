@@ -1,10 +1,7 @@
 public class Additionneur {
     public static void main(String[] arguments) {
         System.out.println("**** Additionneur et diviseur (V1.0, 24/09/18) ****");
-        int answer;
-        int number_1;
-        int number_2;
-        int result_adition;
+        int answer, number_1, number_2, result_adition;
         float result_division;
 
         System.out.println("Voulez vous addtionner ? (oui pour 0 / 1 pour non)");

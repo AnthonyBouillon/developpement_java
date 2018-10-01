@@ -1,4 +1,4 @@
-public class exercice1 {
+public class PairImpair {
     public static void main(String[] args) {
         int number;
         System.out.println("Ecriver un nombre");

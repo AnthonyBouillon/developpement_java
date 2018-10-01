@@ -1,4 +1,4 @@
-public class Exercice3 {
+public class Calculette {
     public static void main(String[] args) {
         System.out.println("Calculette + try catch");
         int number_1, number_2;
@@ -10,24 +10,41 @@ public class Exercice3 {
         number_2 = Console.lireI();
         System.out.println("Ecriver un opérateur (+, -, *, /)");
         operator = Console.lireC();
-        if (operator == '+') {
+
+        /*
+         * if (operator == '+') { result = number_1 + number_2;
+         * System.out.println("Le résultat est : " + result); else if (operator ==
+         * result); } else if (operator == '*') { result = number_1 * number_2;
+         * System.out.println("Le résultat est : " + result); } else if (operator ==
+         * '/') { try { result = number_1 / number_2;
+         * System.out.println("Le résultat est : " + result); ch (ArithmeticException e)
+         * { System.out.println("C'est une division par 0") } } else {
+         * System.out.println("L'opérateur n'est pas conforme");
+         */
+
+        switch (operator) {
+        case '+':
             result = number_1 + number_2;
             System.out.println("Le résultat est : " + result);
-        } else if (operator == '-') {
+            break;
+        case '-':
             result = number_1 - number_2;
             System.out.println("Le résultat est : " + result);
-        } else if (operator == '*') {
+            break;
+        case '*':
             result = number_1 * number_2;
             System.out.println("Le résultat est : " + result);
-        } else if (operator == '/') {
+            break;
+        case '/':
             try {
                 result = number_1 / number_2;
                 System.out.println("Le résultat est : " + result);
             } catch (ArithmeticException e) {
                 System.out.println("C'est une division par 0");
             }
-        } else {
-            System.out.println("L'opérateur n'est pas conforme");
+            break;
+        default:
         }
+
     }
 }

@@ -11,11 +11,12 @@ public class CalculMoyenne {
 
         System.out.println("Note de travaux pratique");
         noteTP = Console.lireD();
-
+        // Note * coefficient de la note
         noteSurveiller = noteSurveiller * 3;
         noteInterrogation = noteInterrogation * 2;
+        // Résultat des note avec leur coefficient divisé par le nombre de note
         result = (noteSurveiller + noteInterrogation + noteTP) / 6;
-
+        // Affiche
         System.out.println("Ta moyenne est de : " + result);
     }
 

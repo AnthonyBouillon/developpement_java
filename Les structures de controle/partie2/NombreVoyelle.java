@@ -5,13 +5,14 @@ public class NombreVoyelle {
         // Je récupère la saisie de l'utilisateur
         Scanner sc = new Scanner(System.in);
         System.out.print("Donnez un mot : ");
-        String mot = sc.next();
+        String mot = sc.nextLine();
+
         mot = mot.toLowerCase();
         // Cette variable contiendra le nombre de voyelle dans un mot
         int compteur_de_voyelle = 0;
 
         for (int i = 0; i < mot.length(); i++) {
-            // Je compte caractère par caractère combien de fois les lettres a e i o u y 
+            // Je compte caractère par caractère combien de fois les lettres a e i o u y
             // sont présente
             switch (mot.charAt(i)) {
             case 'a':

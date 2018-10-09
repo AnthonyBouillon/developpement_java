@@ -10,13 +10,16 @@ public class Remise {
         double TOT;
         double PORT;
         double REM = 0;
+
         System.out.println("Ecriver le prix unitaire d'un produit");
         PU = Console.lireD();
+
         System.out.println("Ecriver la quantité commandée");
         QTE = Console.lireD();
+
         // Prix total = prix unitaire * quantité
         TOT = PU * QTE;
-        // Si le prix total est supérieur à 500 euros, 
+        // Si le prix total est supérieur à 500 euros,
         // le port est gratuit et la remise est de 10%
         if (TOT > 500) {
             REM = TOT * 0.1;

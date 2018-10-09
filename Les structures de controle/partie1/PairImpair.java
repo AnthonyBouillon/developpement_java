@@ -3,6 +3,7 @@ public class PairImpair {
         int number;
         System.out.println("Ecriver un nombre");
         number = Console.lireI();
+        // Modulo = reste de la division
         if (number % 2 == 0) {
             System.out.println("Le nombre est pair");
         } else {

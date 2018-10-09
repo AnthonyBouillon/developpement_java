@@ -6,6 +6,7 @@ public class NombrePremier {
         boolean isPremier = true;
         System.out.println("Ecriver votre nombre");
         n = Console.lireI();
+        // Si isPremier est égale à false, ce n'est pas un nombre premier
         if (n < 0) {
             isPremier = false;
         } else if (n != 0 && n != 1) {

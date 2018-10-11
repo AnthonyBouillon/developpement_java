@@ -35,7 +35,7 @@ public class NombreVoyelle {
                 break;
             }
         }
-        System.out.println(comp + " voyelle(s)");
+        System.out.println(compteur_de_voyelle + " voyelle(s)");
 
     }
 

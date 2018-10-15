@@ -1,10 +1,12 @@
 import java.util.*;
+import javax.swing.*;
 
 public class RechercheDonneeTableau {
     public static void main(String[] args) {
 
         String tableau[] = { "Marie", "Jean", "André", "Jeanne", "Pierre", "René", "Marcel", "Roger", "Louis" };
         boolean word = false;
+        int test = 0;
         // Affichage de la liste des prénoms du tableau
         System.out.println("La liste des prénoms");
         for (int i = 0; i < tableau.length; i++) {
@@ -13,15 +15,16 @@ public class RechercheDonneeTableau {
         // Récupération du prénom à rechercher
         System.out.println("Ecriver le prénom recherché");
         String prenom = Console.lireStr();
-
-        // Compare si deux valeurs sont similaires
-        for (int i = 0; i < tableau.length; i++) {
+        for (int i = 0; i < tableau.length - 1; i++) {
             if (prenom.equals(tableau[i])) {
                 word = true;
-                tableau[i] = "";
-
+                tableau[i] = ".";
+                String tableau_ancien = tableau[i];
+                tableau[i] = tableau[i + 1];
+                tableau[i + 1] = tableau_ancien;
             }
         }
+
         // Affichage de la liste des prénoms du tableau
         System.out.println("La liste des prénoms après la sélection");
         for (int i = 0; i < tableau.length; i++) {

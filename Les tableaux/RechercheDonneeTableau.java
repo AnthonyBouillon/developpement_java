@@ -1,41 +1,78 @@
 import java.util.*;
-import javax.swing.*;
 
 public class RechercheDonneeTableau {
-    public static void main(String[] args) {
 
-        String tableau[] = { "Marie", "Jean", "André", "Jeanne", "Pierre", "René", "Marcel", "Roger", "Louis" };
-        boolean word = false;
-        int test = 0;
-        // Affichage de la liste des prénoms du tableau
-        System.out.println("La liste des prénoms");
-        for (int i = 0; i < tableau.length; i++) {
-            System.out.println(tableau[i]);
+    public static void main(String[] args) {
+        System.out.println("Créer un tableau, supprimer un élément, rechercher un élément");
+        // ---------------------------------------------------------------------------------
+        // CREATION DES VARIABLES
+        String firstname;
+        boolean search = false;
+        // ---------------------------------------------------------------------------------
+        // CREATION DU TABLEAU
+        ArrayList<String> array = new ArrayList<String>();
+        array.add("Marie");
+        array.add("Océanne");
+        array.add("Samantha");
+        array.add("Tommy");
+        array.add("Jerry");
+
+        array.add("Anthony");
+        array.add("Nassim");
+        array.add("Amadou");
+        array.add("Marion");
+        array.add("Alban");
+
+        array.add("Abbé");
+        array.add("Antoine");
+        array.add("Chris");
+        array.add("Toufik");
+        array.add("Thomas");
+
+        array.add("Quentin");
+        array.add("Stéphane");
+        array.add("Sebastien");
+        array.add("Manuela");
+        array.add("André");
+
+        // ---------------------------------------------------------------------------------
+        // AFFICHAGE DU TABLEAU
+        for (int index = 0; index < array.size(); index++) {
+            System.out.println("INDICE : " + index + " || " + array.get(index));
         }
-        // Récupération du prénom à rechercher
-        System.out.println("Ecriver le prénom recherché");
-        String prenom = Console.lireStr();
-        for (int i = 0; i < tableau.length - 1; i++) {
-            if (prenom.equals(tableau[i])) {
-                word = true;
-                tableau[i] = ".";
-                String tableau_ancien = tableau[i];
-                tableau[i] = tableau[i + 1];
-                tableau[i + 1] = tableau_ancien;
+        // ---------------------------------------------------------------------------------
+        // RECUPERATION DU PRENOM RECHERCHE
+        System.out.print("Chercher le prénom : ");
+        firstname = Console.lireStr();
+
+        // ---------------------------------------------------------------------------------
+        // AFFICHAGE DU TABLEAU
+        for (int index = 0; index < array.size(); index++) {
+            System.out.println("INDICE : " + index + " || " + array.get(index));
+        }
+        // ---------------------------------------------------------------------------------
+        // VERIFICATION DU PRENOM
+        for (int index = 0; index < array.size(); index++) {
+            if (firstname.equals(array.get(index))) {
+                search = true;
+                array.remove(index);
+                array.add("");
             }
         }
+        // ---------------------------------------------------------------------------------
+        // AFFICHAGE DU TABLEAU APRES SUPPRESSION
+        for (
 
-        // Affichage de la liste des prénoms du tableau
-        System.out.println("La liste des prénoms après la sélection");
-        for (int i = 0; i < tableau.length; i++) {
-            System.out.println(tableau[i]);
+                int index = 0; index < array.size(); index++) {
+            System.out.println("INDICE : " + index + " || " + array.get(index));
         }
-        // Affiche si le prénom existe ou non
-        if (word == true) {
-            System.out.println("Le prénom à était trouvé !");
+        // ---------------------------------------------------------------------------------
+        // REPONSE
+        if (search == true) {
+            System.out.println(firstname + " à était trouvé");
         } else {
-            System.out.println("Le prénom n'a pas était trouvé..");
+            System.out.println(firstname + " n'a pas était trouvé");
         }
-
     }
+
 }

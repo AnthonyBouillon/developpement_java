@@ -18,6 +18,7 @@ public class NombreMagique {
                 error_restant--;
                 if (error_restant == 0) {
                     System.out.println("Perdu");
+                    game = false;
                 } else {
                     System.out.println("Plus que " + error_restant + " essais");
                 }

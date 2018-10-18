@@ -1,6 +1,6 @@
 public class Multiples {
     public static void main(String[] args) {
-        System.out.println("Programme qui calcule les N premiers multiples d'un nombre entier X")
+        System.out.println("Programme qui calcule les N premiers multiples d'un nombre entier X");
         int NUMBER_1;
         int NUMBER_2;
         int NUMBER_1_BIS;
@@ -14,6 +14,10 @@ public class Multiples {
 
         for (NUMBER_1 = 1; NUMBER_1 <= NUMBER_1_BIS; NUMBER_1++) {
             System.out.println(NUMBER_1 + "*" + NUMBER_2 + " = " + NUMBER_1 * NUMBER_2);
+        }
+
+        for (int i = 1; i <= NUMBER_1; i++) {
+            System.out.println(i + "*" + NUMBER_2 + " = " + i * NUMBER_2);
         }
     }
 }

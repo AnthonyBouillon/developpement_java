@@ -47,7 +47,8 @@ public class TriABulle {
         }
         // ----------------------------------------------------------------------------
         // TRI DU TABLEAU
-        while (compteur_index < (taille * 2)) {
+        compteur_index = 0;
+        while (compteur_index < (taille)) {
             for (int i = 0; i < tableau.length - 1; i++) {
                 if (tableau[i].compareTo(tableau[i + 1]) > 0) {
                     String tableau_ancien = tableau[i];

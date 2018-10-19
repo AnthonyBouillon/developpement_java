@@ -2,6 +2,7 @@ public class exercice_1 {
     public static void main(String[] args) {
         int nombre;
         boolean start = false;
+
         do {
             System.out.println("Entrer un nombre compris entre 1 et 3");
             nombre = Console.lireI();

@@ -2,6 +2,36 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - exercice_5",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "exercice_5",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - exercice_1",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "exercice_1",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - exercice_2",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "exercice_2",
+            "args": ""
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Multiples",
             "request": "launch",
             "cwd": "${workspaceFolder}",

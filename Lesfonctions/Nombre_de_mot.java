@@ -7,19 +7,17 @@ public class Nombre_de_mot {
         // -----------------------------------------------------------------------------
         // RECUPERATION DE LA PHRASE DE L'UTILISATEUR
         System.out.print("Saisissez une phrase : ");
-        String phrase = Console.lireStr();
+        String word = Console.lireStr();
         // -----------------------------------------------------------------------------
         // APPELLE LA FONCTION
-        nombre_de_mot(phrase);
+        word_number(word);
     }
 
     // -----------------------------------------------------------------------------
     // FONCTION QUI COMPTE LE NOMBRE DE MOT DANS UNE PHRASE
-    public static void nombre_de_mot(String phrase_utilisateur) {
-        // Regex qui remplace tout caractères spéciaux par rien
-        phrase_utilisateur = phrase_utilisateur.replaceAll("[';.,?/:+=%*)}{!(\"\t@&|<>]", "");
-        // Compte le nombre d'espaces
-        int nombre_de_mot = phrase_utilisateur.split(" ").length;
-        System.out.print("Il y a : " + nombre_de_mot + " mots");
+    public static void word_number(String word_user) {
+        word_user = word_user.replaceAll("[';.,?/:+=%*)}{!(\"\t@&|<>]", "");
+        StringTokenizer test = new StringTokenizer(word_user);
+        System.out.println(test.countTokens());
     }
 }

@@ -5,9 +5,7 @@ public class Cercle {
     public static void main(String[] arguments) {
         System.out.println("**** Périmètre et surface du Cercle (V1.0, 24/09/18) ****");
 
-        double rayon;
-        double surface;
-        double perimetre;
+        double rayon, surface, perimetre;
         // Affiche
         System.out.println("Veuillez saisir le rayon du cercle :");
         // Récupère la saisie de l'utilisateur (Console est une classe)

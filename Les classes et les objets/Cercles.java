@@ -1,4 +1,6 @@
+
 public class Cercles {
+    // Variable membre
     public double rayon;
 
     public double calculSurface(double rayon) {

@@ -22,13 +22,13 @@ public class Additionneur {
             if (answer == 0) {
                 System.out.println("Ecriver un premier nombre");
                 number_1 = Console.lireI();
+
                 System.out.println("Ecriver un second nombre");
                 number_2 = Console.lireI();
+
                 result_division = number_1 / number_2;
                 System.out.println("Le resultat de la division : " + number_1 + " + " + number_2 + " est egale a "
                         + result_division);
-            } else {
-                System.out.println("Alors pourquoi tu me fait chier ?");
             }
 
         }

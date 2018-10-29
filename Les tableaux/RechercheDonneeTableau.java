@@ -44,12 +44,6 @@ public class RechercheDonneeTableau {
         // RECUPERATION DU PRENOM RECHERCHE
         System.out.print("Chercher le prénom : ");
         firstname = Console.lireStr();
-
-        // ---------------------------------------------------------------------------------
-        // AFFICHAGE DU TABLEAU
-        for (int index = 0; index < array.size(); index++) {
-            System.out.println("INDICE : " + index + " || " + array.get(index));
-        }
         // ---------------------------------------------------------------------------------
         // VERIFICATION DU PRENOM
         for (int index = 0; index < array.size(); index++) {

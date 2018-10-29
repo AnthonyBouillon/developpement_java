@@ -5,7 +5,7 @@ public class TriNombre {
     public int tableau[];
     public int taille;
 
-    public static void saisie(int tableau[]) {
+    public static void saisie(int tableau[], int taille) {
 
         boolean answer = true;
         Scanner sc = new Scanner(System.in);
@@ -15,8 +15,11 @@ public class TriNombre {
             int data = sc.nextInt();
             tableau[index] = data;
             index++;
-            System.out.println("Continuer ? true");
-            answer = sc.nextBoolean();
+            if (index == taille) {
+                answer = false;
+            }
+            // System.out.println("Continuer ? true");
+            // answer = sc.nextBoolean();
         } while (answer == true);
     }
 

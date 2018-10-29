@@ -2,14 +2,8 @@ import java.util.*;
 
 public class Remise {
     public static void main(String[] args) {
-        // Prix unitaire
-        double PU;
-        double QTE;
-        double PAP;
-        // Prix total
-        double TOT;
-        double PORT;
-        double REM = 0;
+
+        double PU, QTE, PAP, TOT, PORT, REM = 0;
 
         System.out.println("Ecriver le prix unitaire d'un produit");
         PU = Console.lireD();
@@ -19,6 +13,7 @@ public class Remise {
 
         // Prix total = prix unitaire * quantité
         TOT = PU * QTE;
+        
         // Si le prix total est supérieur à 500 euros,
         // le port est gratuit et la remise est de 10%
         if (TOT > 500) {

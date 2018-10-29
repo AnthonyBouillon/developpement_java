@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class CalculJeuneEtVieux {
     public static void main(String[] args) {
         System.out.println("Programme qui compte le nombre de personne par age");
@@ -8,9 +10,9 @@ public class CalculJeuneEtVieux {
         int compteurCentenaire = 0;
         int boucle = 1;
         while (boucle == 1) {
-            System.out.println("Ecrivez votre âge");
             Scanner sc = new Scanner(System.in);
-            String mot = sc.next();
+            System.out.println("Ecrivez votre âge");
+            String mot = sc.nextLine();
             age = Integer.parseInt(mot);
             if (age < 20) {
                 compteurJeune++;

@@ -1,11 +1,12 @@
 
 public class Cercles {
-    // Variable membre
+    // Attribut
     public double rayon;
 
     public double calculSurface(double rayon) {
         double resultat = Math.PI * rayon * rayon;
         return resultat;
+
     }
 
     public double calculCirconference(double rayon) {

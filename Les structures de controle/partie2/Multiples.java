@@ -16,7 +16,7 @@ public class Multiples {
             System.out.println(NUMBER_1 + "*" + NUMBER_2 + " = " + NUMBER_1 * NUMBER_2);
         }
 
-        for (int i = 1; i <= NUMBER_1; i++) {
+        for (int i = 1; i <= NUMBER_1 - 1; i++) {
             System.out.println(i + "*" + NUMBER_2 + " = " + i * NUMBER_2);
         }
     }

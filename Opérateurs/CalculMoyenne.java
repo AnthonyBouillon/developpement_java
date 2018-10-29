@@ -11,6 +11,7 @@ public class CalculMoyenne {
 
         System.out.println("Note de travaux pratique");
         noteTP = Console.lireD();
+
         // Note * coefficient de la note
         noteSurveiller = noteSurveiller * 3;
         noteInterrogation = noteInterrogation * 2;

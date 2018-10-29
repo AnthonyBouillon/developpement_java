@@ -16,7 +16,6 @@ public class NombreSeconde {
         // Seconde = le reste
         seconde = seconde % 60;
         // Affiche
-        System.out.println(jour + "J " + heure + "Hé " + minute + "MIN " + seconde + "S");
-
+        System.out.println(jour + "J " + heure + "H " + minute + "MIN " + seconde + "S");
     }
 }

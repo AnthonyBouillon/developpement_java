@@ -10,7 +10,7 @@ public class tri_nombre {
         TriNombre.taille = sc.nextInt();
         TriNombre.tableau = new int[TriNombre.taille];
 
-        TriNombre.saisie(TriNombre.tableau);
+        TriNombre.saisie(TriNombre.tableau, TriNombre.taille);
         TriNombre.tri(TriNombre.tableau);
         TriNombre.affiche(TriNombre.tableau);
 

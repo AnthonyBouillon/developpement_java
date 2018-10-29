@@ -1,7 +1,7 @@
 public class Conversion {
     public static void main(String[] arguments) {
         System.out.println("**** Conversion temperature de Fahrenheit en celcius ****");
-        float fahrenheit, celcius, result;
+        double fahrenheit, celcius, result;
         // Récupère les degrès en Fahrenheit
         System.out.println("Ecriver la temperature en Fahrenheit");
         fahrenheit = Console.lireD();

@@ -1,93 +1,69 @@
 public class Participation {
     public static void main(String[] args) {
-        char reponse;
+        int statut;
+        int enfant;
+        int nombre_enfant;
+        int participation;
         double salaire;
-        int Enfant;
-        double participation;
-        double pourcentage_participation;
-        int prix_repas = 10;
 
         System.out.println("Quel est votre salaire net");
         salaire = Console.lireD();
 
-        System.out.println("Avez vous des enfants ? 0 pour (non)");
-        Enfant = Console.lireI();
+        System.out.println("Etes vous Célibaire(1) ou Marié(2).");
+        statut = Console.lireI();
 
-        System.out.println("Etes vous Célibaire ou Marié.");
-        reponse = Console.lireC();
-        // Si il est célibataire
-        if (reponse == 'C' || reponse == 'c') {
-            // Que le salaire est inférieur à 1200
-            if (salaire < 1200) {
-                // Qu'il a des enfants
-                if (Enfant > 0) {
-                    // La participation vaut 30% + 10% par enfant, pour un maximum de 50% de
-                    // participation
-                    pourcentage_participation = 0.3 + (0.1 * Enfant);
-                    if (pourcentage_participation >= 0.5) {
-                        pourcentage_participation = 0.5;
-                        participation = prix_repas * pourcentage_participation;
-                        System.out.println("La participation est de : " + participation);
-                    } else {
-                        participation = prix_repas * pourcentage_participation;
-                        System.out.println("La participation est de : " + participation);
+        System.out.println("Avez vous des enfants ? 1 pour oui");
+        enfant = Console.lireI();
+
+        if (salaire >= 1200) {
+            if (statut == 1) {
+                if (enfant == 1) {
+                    System.out.println("Combien d'enfant ?");
+                    nombre_enfant = Console.lireI();
+                    participation = 20 + (10 * nombre_enfant);
+                    if (participation >= 50) {
+                        participation = 50;
                     }
-                    // Si il n'y a pas d'enfant
                 } else {
-                    participation = prix_repas * 0.3;
-                    System.out.println("La participation est de : " + participation);
+                    participation = 20;
                 }
             } else {
-                if (Enfant > 0) {
-                    pourcentage_participation = 0.2 + (0.1 * Enfant);
-                    if (pourcentage_participation >= 0.5) {
-                        pourcentage_participation = 0.5;
-                        participation = prix_repas * pourcentage_participation;
-                        System.out.println("La participation est de : " + participation);
-                    } else {
-                        participation = prix_repas * pourcentage_participation;
-                        System.out.println("La participation est de : " + participation);
+                if (enfant == 1) {
+                    System.out.println("Combien d'enfant ?");
+                    nombre_enfant = Console.lireI();
+                    participation = 25 + (10 * nombre_enfant);
+                    if (participation >= 50) {
+                        participation = 50;
                     }
                 } else {
-                    participation = prix_repas * 0.2;
-                    System.out.println("La participation est de : " + participation);
+                    participation = 25;
                 }
             }
-            // Si il est marié(e)
-        } else if (reponse == 'M' || reponse == 'm') {
-            // Meme principe sauf que la base est de 25% ou 35% suivant le salaire
-            if (salaire < 1200) {
-                if (Enfant > 0) {
-                    pourcentage_participation = 0.35 + (0.1 * Enfant);
-                    if (pourcentage_participation >= 0.5) {
-                        pourcentage_participation = 0.5;
-                        participation = prix_repas * pourcentage_participation;
-                        System.out.println("La participation est de : " + participation);
-                    } else {
-                        participation = prix_repas * pourcentage_participation;
-                        System.out.println("La participation est de : " + participation);
+        } else {
+            if (statut == 2) {
+                if (enfant == 1) {
+                    System.out.println("Combien d'enfant ?");
+                    nombre_enfant = Console.lireI();
+                    participation = 30 + (10 * nombre_enfant);
+                    if (participation >= 50) {
+                        participation = 50;
                     }
                 } else {
-                    participation = prix_repas * 0.35;
-                    System.out.println("La participation est de : " + participation);
+                    participation = 30;
                 }
             } else {
-                if (Enfant > 0) {
-                    pourcentage_participation = 0.25 + (0.1 * Enfant);
-                    if (pourcentage_participation >= 0.5) {
-                        pourcentage_participation = 0.5;
-                        participation = prix_repas * pourcentage_participation;
-                        System.out.println("La participation est de : " + participation);
-                    } else {
-                        participation = prix_repas * pourcentage_participation;
-                        System.out.println("La participation est de : " + participation);
+                if (enfant == 1) {
+                    System.out.println("Combien d'enfant ?");
+                    nombre_enfant = Console.lireI();
+                    participation = 35 + (10 * nombre_enfant);
+                    if (participation >= 50) {
+                        participation = 50;
                     }
                 } else {
-                    participation = prix_repas * 0.25;
-                    System.out.println("La participation est de : " + participation);
+                    participation = 35;
                 }
             }
-
         }
+        System.out.println("Votre participation : " + participation);
     }
 }

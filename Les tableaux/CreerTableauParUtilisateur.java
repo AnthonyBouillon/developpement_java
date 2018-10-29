@@ -18,14 +18,16 @@ public class CreerTableauParUtilisateur {
             // Récupère les valeurs saisies du tableau
             System.out.println("Ecriver les valeurs du tableau (INT)");
             valeur_saisie = Console.lireI();
-            // A chaque saisie du tableau notre compteur incrémente de 1 ce qui correspond 
-            // 
+            // A chaque saisie du tableau notre compteur incrémente de 1 ce qui correspond
+            //
             // l'index du tableau
             tableau[compteur] = valeur_saisie;
             compteur++;
+            // On stop la boucle une fois qu'il a rempli entièrement le tableau
+            if (compteur == saisie_taille) {
+                start = 2;
+            }
 
-            System.out.println("Ecrit 0 pour arreter sinon 1");
-            start = Console.lireI();
         }
         // Affiche le tableau
         for (int index = 0; index < saisie_taille; index++) {

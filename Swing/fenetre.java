@@ -17,6 +17,8 @@ public class fenetre {
         fenetre.setLocationRelativeTo(null);
         // Défini la couleur de fond
         fenetre.getContentPane().setBackground(Color.ORANGE);
+        // Défini un curseur
+        fenetre.setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
         // -----------------------------------------------------
 
         // Affiche la fenetre

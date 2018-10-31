@@ -1,15 +1,15 @@
 
 public class Cercles {
     // Attribut
-    public double rayon;
+    double rayon;
 
-    public double calculSurface(double rayon) {
+    public double calculSurface() {
         double resultat = Math.PI * rayon * rayon;
         return resultat;
 
     }
 
-    public double calculCirconference(double rayon) {
+    public double calculCirconference() {
         double resultat = 2 * Math.PI * rayon;
         return resultat;
     }

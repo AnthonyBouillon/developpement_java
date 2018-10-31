@@ -14,22 +14,16 @@ public class Token {
 
     public static void StrToken(String str1, String str2, int position) {
         // Compteur de ;
-        int compteur = 0;
-        // Variable qui contiendra le résultat
+        int compteur = 1;
         String string = "";
-        // La position du -1 pour qu'il commence a partir de 1 au lieu de 0
-        position = position - 1;
-        // Parcour le tableau
         for (int i = 0; i < str1.length(); i++) {
             // Si il tombe sur un ;
             if (str1.substring(i, i + 1).equals(str2)) {
-                // On incrémente le compteur
                 compteur++;
             }
-            // Si on tombe sur un caractère autre que le ;
+            // Si on tombe sur un caractère autre que le ; , on affiche le reste des caractères jusqu'au prochain ;
             if ((compteur == position) && (!str1.substring(i, i + 1).equals(str2))) {
-                // je le stock dans la variable
-                string += str1.substring(i, i + 1);
+                string = string + str1.substring(i, i + 1);
             }
         }
         System.out.print(string);

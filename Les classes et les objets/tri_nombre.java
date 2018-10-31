@@ -2,25 +2,32 @@ import java.util.Scanner;
 
 public class tri_nombre {
     public static void main(String[] args) {
-        TriNombre TriNombre = new TriNombre();
-
         Scanner sc = new Scanner(System.in);
-        // TABLEAU 1
+        // Création de deux objets qui provient de la même classe
+        TriNombre Tri_1 = new TriNombre();
+        TriNombre Tri_2 = new TriNombre();
+        // Tableau 1
         System.out.println("La taille du tableau");
-        TriNombre.taille = sc.nextInt();
-        TriNombre.tableau = new int[TriNombre.taille];
-
-        TriNombre.saisie(TriNombre.tableau, TriNombre.taille);
-        TriNombre.tri(TriNombre.tableau);
-        TriNombre.affiche(TriNombre.tableau);
-
-        // TABLEAU 2
+        // Défini une taille
+        Tri_1.taille = sc.nextInt();
+        Tri_1.tableau = new int[Tri_1.taille];
+        // Appelle les méthodes
+        Tri_1.saisie();
+        Tri_1.tri();
+        Tri_1.affiche();
+        // -----------------------------------
+        System.out.println();
+        // -----------------------------------
+        // Tableau 2
         System.out.println("La taille du tableau");
-        TriNombre.taille = sc.nextInt();
-        TriNombre.tableau = new int[TriNombre.taille];
+        // Définie une taille
+        Tri_2.taille = sc.nextInt();
+        Tri_2.tableau = new int[Tri_2.taille];
+        // Apelle les méthodes
+        Tri_2.saisie();
+        Tri_2.tri();
+        Tri_2.affiche();
 
-        TriNombre.saisie(TriNombre.tableau);
-        TriNombre.tri(TriNombre.tableau);
-        TriNombre.affiche(TriNombre.tableau);
+        sc.close();
     }
 }

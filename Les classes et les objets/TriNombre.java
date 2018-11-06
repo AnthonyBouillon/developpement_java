@@ -5,14 +5,17 @@ public class TriNombre {
     int tableau[];
     int taille;
 
-    public void saisie() {
+    public TriNombre() {
         Scanner sc = new Scanner(System.in);
+        System.out.println("La taille du tableau");
+        taille = sc.nextInt();
+        tableau = new int[taille];
+
         System.out.println("Remplisser votre tableau");
         for (int i = 0; i < tableau.length; i++) {
             int data = sc.nextInt();
             tableau[i] = data;
         }
-        sc.close();
     }
 
     public void tri() {
